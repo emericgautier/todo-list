@@ -5,6 +5,17 @@ function storeList() {
   window.localStorage.todoList = list.innerHTML;
 }
 
+function getTodos() {
+  // vérification si il n'est pas vide <li> 'true'
+  if (window.localStorage.todoList) {
+    list.innerHTML = window.localStorage.todoList;
+  } else {
+    list.innerHTML = `<li>Cliquez sur un todo pour le supprimer</li>`;
+  }
+}
+// au chargement de la page, jouer la fonction :
+window.addEventListener("load", getTodos);
+
 // Add element
 form.addEventListener("submit", (e) => {
   e.preventDefault();
