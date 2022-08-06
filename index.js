@@ -1,6 +1,22 @@
+const form = document.querySelector("form");
+
+// Add element
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  // réccupérer ce qu'il y a de taper dans l'input, en récupérant l'ID
+  console.log(item.value);
+  // injecter la valeur dans le <ul>, en créant une balise <li>
+  list.innerHTML += `<li>${item.value}</li>`;
+
+  // remettre à zéro
+  item.value = "";
+});
+
 // créer un form pour taper les todos
 
-// Ajouter sur le dom ce qui est tapé dans le form à la validation du form
+// Ajouter sur le dom ce qui est tapé dans l'input à la validation du form
+// monInput.value (ce qui est tapé dans l'input)
 
 // Supprimer un todo lorsque l'on click dessus (.remove())
 
