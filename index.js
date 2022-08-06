@@ -1,5 +1,10 @@
 const form = document.querySelector("form");
 
+// Storage part
+function storeList() {
+  window.localStorage.todoList = list.innerHTML;
+}
+
 // Add element
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -11,6 +16,9 @@ form.addEventListener("submit", (e) => {
 
   // remettre à zéro
   item.value = "";
+
+  // jouer la fonction quand on valide
+  storeList();
 });
 
 // remove element
@@ -22,6 +30,9 @@ list.addEventListener("click", (e) => {
   } else {
     e.target.classList.add("checked");
   }
+
+  // jouer la fonction quand on supprime
+  storeList();
 });
 
 // créer un form pour taper les todos
