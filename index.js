@@ -13,6 +13,12 @@ form.addEventListener("submit", (e) => {
   item.value = "";
 });
 
+// remove element
+list.addEventListener("click", (e) => {
+  //   console.log(e.target);
+  e.target.remove();
+});
+
 // créer un form pour taper les todos
 
 // Ajouter sur le dom ce qui est tapé dans l'input à la validation du form
