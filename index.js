@@ -16,7 +16,12 @@ form.addEventListener("submit", (e) => {
 // remove element
 list.addEventListener("click", (e) => {
   //   console.log(e.target);
-  e.target.remove();
+  //   e.target.remove();
+  if (e.target.classList.contains("checked")) {
+    e.target.remove();
+  } else {
+    e.target.classList.add("checked");
+  }
 });
 
 // créer un form pour taper les todos
